@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<h1>Input Your Info: </h1>
+
+
+<form action="/polls/info/" method="post">
+        {% csrf_token %}
+        What is Your Name? <input type="text" name="user_name">
+        <input type="submit" value="OK">
+</form>
+{% if name %}
+       <p> Hi! {{ name }}, How are You ?</p>
+    {% endif %}
+</body>
+</html>
